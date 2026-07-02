@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Lifecycle Hoooks Parent Component">
+        <div class="slds-m-around_medium">
+            <!--Mounting Phase Example-->
+            <!-- <lightning-input type="text" label="Enter username" onkeyup={changeHandler}></lightning-input>
+            <p>
+                Username : {userName}
+            </p> -->
+            <!--Unmounting Phase Example-->
+            <template lwc:if={isChildVisible}>
+                <lightning-button 
+                variant="brand"
+                label="Remove Child"
+                title="Remove Child"
+                onclick={handleClick}>
+               </lightning-button>
+            </template>
+            <template lwc:else>
+                <lightning-button 
+                variant="brand"
+                label="Show Child"
+                title="Show Child"
+                onclick={handleClick}>
+               </lightning-button>
+            </template>
+            <template lwc:if={isChildVisible}>
+                <c-life-cycle-hook-child></c-life-cycle-hook-child>
+            </template>   
+        </div>
+    </lightning-card>
+    
+</template>

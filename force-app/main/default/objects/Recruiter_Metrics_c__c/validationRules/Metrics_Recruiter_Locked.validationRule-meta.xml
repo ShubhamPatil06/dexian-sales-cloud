@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Metrics_Recruiter_Locked</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISNEW()), ISCHANGED(Recruiter__c))</errorConditionFormula>
+    <errorDisplayField>Recruiter__c</errorDisplayField>
+    <errorMessage>The Recruiter on a Metrics record cannot be changed after creation.</errorMessage>
+</ValidationRule>

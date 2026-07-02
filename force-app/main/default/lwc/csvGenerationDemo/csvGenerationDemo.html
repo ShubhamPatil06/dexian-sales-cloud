@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="CSV Generation In LWc">
+        <div class="slds-m-around_medium">
+            <template lwc:if={contactList}>
+                <div class="slds-p-bottom_x-small">
+                    <lightning-datatable
+                     data={contactList}
+                     columns ={columns}
+                     key-field="Id"
+                     ></lightning-datatable>
+                </div>      
+            </template>
+            <div>
+                <lightning-button variant="brand" label="Generate Csv" onclick={csvGenerator}></lightning-button>
+            </div>
+        </div>
+    </lightning-card> 
+</template>

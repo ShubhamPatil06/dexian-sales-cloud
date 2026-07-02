@@ -1,0 +1,44 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium">
+            <div>
+                <lightning-input
+                    type="search"
+                    label="Search"
+                    onchange={handleChange}
+                    value={query}
+                    placeholder="Search For Movies, Shows, Anime...">
+                </lightning-input>
+            </div>
+
+            <template lwc:if={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_medium">
+                    <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <lightning-layout multiple-rows>
+                <template lwc:if={hasShows}>
+                    <template for:each={shows} for:item="tvshow">
+                        <lightning-layout-item size="3" padding="around-small" key={tvshow.id}>
+                            <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                                <img src={tvshow.imageUrl} height="200px" alt={tvshow.name}/>
+                                <div class="slds-text-title_caps slds-p-vertical_medium"><strong>{tvshow.name}</strong></div>
+                                <div class="slds-text-title_caps"><strong>Premiered Date - </strong>{tvshow.premiered}</div>
+                                <div class="slds-text-title_caps"><strong>Average Rating - </strong>{tvshow.ratingAverage}</div>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </template>
+
+                <template lwc:elseif={isLoading}>
+                    <!-- spinner already shown above -->
+                </template>
+
+                <template lwc:else>
+                    <div class="slds-p-around_medium">No results found.</div>
+                </template>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

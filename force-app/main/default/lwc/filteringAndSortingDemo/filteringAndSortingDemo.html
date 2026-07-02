@@ -1,0 +1,64 @@
+<template>
+    <lightning-card title="Client Side Filtering Demo">
+        <div class="slds-m-around_medium">
+            <div class="filter-section">
+                <lightning-layout>
+                    <lightning-layout-item size="2" padding="around-small">
+                        <lightning-combobox
+                         name="filterby"
+                         label="Filter By"
+                         value={filterByValue}
+                         placeholder="Filter By"
+                         options={filterOptions}
+                         onchange={handleFilterChange} >
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4"  padding="around-small">
+                        <lightning-input 
+                         type="text" 
+                         label="Filter Contacts" 
+                         onkeyup={filterContactHandler}>
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" alignment-bump="left" padding="around-small">
+                        <lightning-combobox
+                         name="sortedby"
+                         label="Sort By"
+                         value={sortByValue}
+                         placeholder="Sort By"
+                         options={sortOptions}
+                         onchange={sortChangeHandler} >
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+            <div>
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <template lwc:if={tableHeadings}>
+                                <template for:each={tableHeadings} for:item="heading">
+                                    <th key={heading}>{heading}</th>
+                                </template>
+                            </template>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                        <template lwc:if={filteredDataTable}>
+                            <template for:each={filteredDataTable} for:item="contact">
+                                <tr key={contact.Id}>
+                                    <td >{contact.Id}</td>
+                                    <td >{contact.Title}</td>
+                                    <td >{contact.FirstName}</td>
+                                    <td >{contact.LastName}</td>
+                                    <td >{contact.Department}</td>
+                                    <td >{contact.Email}</td>
+                                </tr>   
+                            </template>
+                        </template>
+                    </tbody>
+                </table>           
+            </div>
+        </div>
+    </lightning-card>   
+</template>

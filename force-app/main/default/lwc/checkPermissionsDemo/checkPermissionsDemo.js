@@ -1,0 +1,14 @@
+import { LightningElement } from 'lwc';
+import hasViewAllData from '@salesforce/userPermission/ViewAllData';
+import myCustomPermission from '@salesforce/customPermission/show_details'
+
+export default class CheckPermissionsDemo extends LightningElement {
+
+    get hasViewAllDataPermission(){
+        return hasViewAllData
+    }
+
+    get hasCustomPermission(){
+        return myCustomPermission
+    }
+}

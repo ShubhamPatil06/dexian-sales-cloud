@@ -1,0 +1,13 @@
+<template>
+    <div class="slds-m-around_medium">
+        <div class="slds-text-title_caps">What is Agentforce?</div>
+        <div><slot name="agentforce"></slot></div>
+        <div class="slds-text-title_caps">What is Agent Builder?</div>
+        <div><slot name="agentbuilder"></slot></div>
+        <div class="slds-text-title_caps">What is Agent Script?</div>
+        <div><slot name="agentscript"></slot></div>
+        <footer class="slds-card__footer slds-hide">
+            <slot name="footer" onslotchange={slotChangeHandler}></slot>
+        </footer>
+    </div> 
+</template>

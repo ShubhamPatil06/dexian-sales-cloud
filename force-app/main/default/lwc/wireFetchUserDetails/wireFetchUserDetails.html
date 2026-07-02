@@ -1,0 +1,22 @@
+<template>
+    <!--Using Wire-->
+    <lightning-card title="Fetch User Details Using Wire As Function">
+        <div class=" slds-m-around_medium">
+            <p ><strong class="slds-text-title_caps">User Id : </strong>{userId}</p>
+            <template lwc:if={userDetails}>
+                <p ><strong class="slds-text-title_caps">User Name : </strong>{userDetails.Name.value}</p>
+                <p ><strong class="slds-text-title_caps">User Email : </strong>{userDetails.Email.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Fetch User Details Using Wire As Property">
+        <div class=" slds-m-around_medium">
+            <template lwc:if={userDetailProperty.data}>
+                <p ><strong class="slds-text-title_caps">User Id : </strong>{userDetailProperty.data.id}</p>
+                <p ><strong class="slds-text-title_caps">User Name : </strong>{userDetailProperty.data.fields.Name.value}</p>
+                <p ><strong class="slds-text-title_caps">User Email : </strong>{userDetailProperty.data.fields.Email.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

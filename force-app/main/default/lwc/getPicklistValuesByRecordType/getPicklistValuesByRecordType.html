@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="getPicklistValuesByRecordType Adapter Rating Options">
+        <div class="slds-m-around_medium"> 
+            <template lwc:if={ratingOptions}>
+                <lightning-combobox
+                 name="Rating"
+                 label="Rating"
+                 value={selectedRatingValue}
+                 placeholder="Select Industry"
+                 options={ratingOptions}
+                 onchange={handleChange} >
+                </lightning-combobox>
+                <p><strong class="slds-text-title_caps">Selected Rating is : </strong>{selectedRatingValue}</p>
+            </template>
+            <template lwc:if={accountSourceOptions}>
+                <lightning-combobox
+                 name="AccountSource"
+                 label="AccountSource"
+                 value={selectedAccountSourceValue}
+                 placeholder="Select AccountSource"
+                 options={accountSourceOptions}
+                 onchange={handleChange} >
+                </lightning-combobox>
+                <p><strong class="slds-text-title_caps">Selected AccountSource is : </strong>{selectedAccountSourceValue}</p>
+            </template>
+        </div>
+    </lightning-card> 
+</template>

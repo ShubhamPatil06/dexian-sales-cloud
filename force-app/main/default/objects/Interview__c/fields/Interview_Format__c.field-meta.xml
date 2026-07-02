@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interview_Format__c</fullName>
+    <label>Interview Format</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>Video (Zoom)</fullName>
+                <default>false</default>
+                <label>Video (Zoom)</label>
+            </value>
+            <value>
+                <fullName>Video (Teams)</fullName>
+                <default>false</default>
+                <label>Video (Teams)</label>
+            </value>
+            <value>
+                <fullName>Video (Google Meet)</fullName>
+                <default>false</default>
+                <label>Video (Google Meet)</label>
+            </value>
+            <value>
+                <fullName>Onsite</fullName>
+                <default>false</default>
+                <label>Onsite</label>
+            </value>
+            <value>
+                <fullName>Take-Home Assessment</fullName>
+                <default>false</default>
+                <label>Take-Home Assessment</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_fill_date_must_be_after_open_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( NOT(ISBLANK(Target_Fill_Date__c)), Target_Fill_Date__c &lt; Open_Date__c )</errorConditionFormula>
+    <errorDisplayField>Open_Date__c</errorDisplayField>
+    <errorMessage>Target fill date cannot be before the job order open date.</errorMessage>
+</ValidationRule>

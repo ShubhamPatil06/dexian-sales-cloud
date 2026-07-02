@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Calling Apex Method Imperatively">
+        <div class="slds-m-around_medium">
+            <div class="slds-p-bottom_x-small">
+                <lightning-button label="Call Apex Imperatively" variant="brand" onclick={handleClick}></lightning-button>
+            </div>
+            <template lwc:if={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <div class="slds-box slds-box_small" key={account.Id}>
+                        <p class="slds-text-title_caps"><strong>Name : </strong>{account.Name}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>   
+</template>

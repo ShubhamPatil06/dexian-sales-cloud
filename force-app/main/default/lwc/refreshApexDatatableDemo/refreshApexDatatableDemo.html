@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Refresh Apex DataTable Demo">
+        <div class="slds-m-around_medium">
+            <template lwc:if={contactList.data}>
+                <lightning-datatable
+                 key-field="Id"
+                 data={contactList.data}
+                 draft-values={draftValues}
+                 columns={columns}
+                 onsave={handleSave}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

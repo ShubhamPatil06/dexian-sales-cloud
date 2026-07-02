@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Submission_Date__c</fullName>
+    <label>Last Submission Date</label>
+    <summarizedField>Candidate_Submission__c.Submission_Date__c</summarizedField>
+    <summaryForeignKey>Candidate_Submission__c.Job_Order__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

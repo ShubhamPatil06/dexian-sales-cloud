@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Education__c</fullName>
+    <label>Education</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High School Diploma</fullName>
+                <default>false</default>
+                <label>High School Diploma</label>
+            </value>
+            <value>
+                <fullName>MBA</fullName>
+                <default>false</default>
+                <label>MBA</label>
+            </value>
+            <value>
+                <fullName>Ph.D.</fullName>
+                <default>false</default>
+                <label>Ph.D.</label>
+            </value>
+            <value>
+                <fullName>Post Doctorate</fullName>
+                <default>false</default>
+                <label>Post Doctorate</label>
+            </value>
+            <value>
+                <fullName>Associate&apos;s Degree</fullName>
+                <default>false</default>
+                <label>Associate&apos;s Degree</label>
+            </value>
+            <value>
+                <fullName>Bachelor&apos;s Degree</fullName>
+                <default>false</default>
+                <label>Bachelor&apos;s Degree</label>
+            </value>
+            <value>
+                <fullName>Master&apos;s Degree</fullName>
+                <default>false</default>
+                <label>Master&apos;s Degree</label>
+            </value>
+            <value>
+                <fullName>Professional Certification</fullName>
+                <default>false</default>
+                <label>Professional Certification</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

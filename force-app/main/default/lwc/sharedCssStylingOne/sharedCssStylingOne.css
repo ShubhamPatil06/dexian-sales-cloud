@@ -1,0 +1,5 @@
+@import 'c/sharedCssLibrary';
+.one {
+    width:80%;
+    background-color: var(--slds-g-color-error-base-50);
+}

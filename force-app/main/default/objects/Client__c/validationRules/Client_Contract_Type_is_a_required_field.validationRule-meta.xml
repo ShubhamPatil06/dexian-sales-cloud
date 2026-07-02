@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Contract_Type_is_a_required_field</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( Contract_Type__c , &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Contract_Type__c</errorDisplayField>
+    <errorMessage>Contract Type is required before saving the record</errorMessage>
+</ValidationRule>

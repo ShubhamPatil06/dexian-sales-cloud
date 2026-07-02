@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conversion_Rate__c</fullName>
+    <formula>IF(
+    Monthly_Interviews_Scheduled__c = 0,
+    0,
+    (Monthly_Placements__c / Monthly_Interviews_Scheduled__c) * 100
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Placement Conversion Rate (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Recruiter_Requires_User</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Recruiter_Type__c, &apos;Internal&apos;),
+    ISBLANK(User__c)
+)</errorConditionFormula>
+    <errorDisplayField>User__c</errorDisplayField>
+    <errorMessage>Internal recruiters must be linked to a Salesforce User account. Please select the User record for this recruiter, or change the Recruiter Type to External/Vendor or Contract.</errorMessage>
+</ValidationRule>

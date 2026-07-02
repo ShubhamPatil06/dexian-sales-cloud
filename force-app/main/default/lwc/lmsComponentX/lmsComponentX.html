@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="LWC Communication Using LMS Component B">
+        <div class="slds-m-around_medium">
+            <p class="slds-text-title_caps"><strong>Message From A :</strong> {subscribedMessage} </p>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button
+            variant="destructive"
+            label="Unsubscribe"
+            onclick={unsubscribeHandler}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+    
+</template>

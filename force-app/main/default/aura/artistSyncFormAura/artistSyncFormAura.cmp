@@ -1,0 +1,14 @@
+<aura:component implements="lightning:actionOverride,
+                             force:hasRecordId,
+                             force:hasSObjectName,
+                             flexipage:availableForAllPageTypes"
+                access="global">
+
+    <!-- recordId auto-populated by force:hasRecordId -->
+    <aura:attribute name="recordId" type="String" />
+    <!-- sObjectName auto-populated by force:hasSObjectName -->
+    <aura:attribute name="sObjectName" type="String" />
+
+    <c:artistSyncForm record-id="{!v.recordId}" />
+
+</aura:component>

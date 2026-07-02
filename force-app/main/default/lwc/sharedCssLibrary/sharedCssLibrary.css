@@ -1,0 +1,10 @@
+.wrapper {
+    width: 100%;
+    color:var(--slds-g-color-neutral-base-90);
+}
+.skills {
+    text-align: right;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color:var(--slds-g-color-neutral-base-90);
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Submit_blocks_new_submissions</fullName>
+    <active>true</active>
+    <errorConditionFormula>Candidate__r.Do_Not_Submit__c  = TRUE</errorConditionFormula>
+    <errorMessage>This candidate has been flagged Do Not Submit. Contact your manager before proceeding</errorMessage>
+</ValidationRule>

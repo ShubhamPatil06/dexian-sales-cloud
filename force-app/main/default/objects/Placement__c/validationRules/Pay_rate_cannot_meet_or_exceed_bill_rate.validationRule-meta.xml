@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pay_rate_cannot_meet_or_exceed_bill_rate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Pay_Rate__c)),
+  NOT(ISBLANK(Bill_Rate__c)),
+  Pay_Rate__c &gt;= Bill_Rate__c
+)</errorConditionFormula>
+    <errorDisplayField>Bill_Rate__c</errorDisplayField>
+    <errorMessage>Pay rate cannot be equal to or greater than the bill rate. This placement would generate zero or negative margin</errorMessage>
+</ValidationRule>

@@ -1,0 +1,32 @@
+<template>
+<div class="slds-theme_default" style="transform: translateY(0%);">
+    <div class="slds-align_absolute-center slds-p-top_medium">
+        <img src={loudLogoUrl}>
+    </div>
+    <div class="slds-align_absolute-center slds-p-top_medium slds-p-bottom_xx-large">
+        <div class="slds-col slds-size_3-of-6">
+            <div style="background:#168FB2; color: #FFFFFF; font-weight: 600; font-size: 1.2rem;" class="slds-card slds-has-bottom-magnet">
+                <div class="slds-p-around_medium">LOGIN </div>
+            </div>
+            <div class="slds-card slds-has-top-magnet">
+                <div class="slds-col slds-size_3-of-6">
+                    <div class="slds-p-around_medium">
+                        <lightning-input class="fetchDetails" type="text" label="Email" name="emailField" placeholder="Enter Email"></lightning-input>
+                    </div>
+                    <div class="slds-p-around_medium">
+                        <lightning-input class="fetchDetails" type="password" label="Password" name="userPassword" placeholder="Enter Password"></lightning-input>
+                    </div>
+
+                    <div class="slds-p-around_medium">
+                        <button class="slds-button slds-button_neutral btn-login" title="Primary action" onclick={handleLogin}>Login</button>
+                        <button class="slds-m-left_x-small slds-button slds-button_neutral btn-login" title="Primary action" onclick={handleForgotPassword}>Forgot Password</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-text-body_regular slds-float_right" style="color: #999;">
+                All rights reserved ® 360 Degree Cloud, 2016
+            </div>
+        </div>
+    </div>
+</div>
+</template>

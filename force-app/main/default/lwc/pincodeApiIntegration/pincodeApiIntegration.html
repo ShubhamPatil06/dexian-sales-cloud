@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Pincode API Integration">
+        <div class="slds-m-around_medium">
+            <!-- Input Row -->
+            <div class="slds-grid slds-gutters slds-m-bottom_medium">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input
+                        type="text"
+                        label="Enter Pincode"
+                        placeholder="e.g. 440022"
+                        maxlength="6"
+                        value={pincodeValue}
+                        onchange={handlePincodeChange}>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-align-bottom">
+                    <lightning-button
+                        label="Search"
+                        variant="brand"
+                        onclick={handleSearch}
+                        disabled={isLoading}>
+                    </lightning-button>
+                </div>
+                <!-- Loading Spinner -->
+                <template if:true={isLoading}>
+                    <lightning-spinner alternative-text="Loading..." size="small"></lightning-spinner>
+                </template>
+                <!-- Error Message -->
+                <template if:true={errorMessage}>
+                    <div class="slds-notify slds-notify_alert slds-alert_error slds-m-bottom_small" role="alert">
+                    {errorMessage}
+                    </div>
+                </template>
+            </div>
+            <!-- Results Table -->
+            <template lwc:if={hasResults}>
+                <lightning-datatable
+                    key-field="Name"
+                    data={postOffices}
+                    columns={columns}
+                    hide-checkbox-column>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card> 
+</template>

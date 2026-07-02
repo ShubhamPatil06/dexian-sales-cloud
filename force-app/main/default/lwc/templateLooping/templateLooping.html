@@ -1,0 +1,70 @@
+<template>
+    <lightning-card title="for:each Looping Demo">
+        <div class="slds-m-around_medium">       
+                <ul class="slds-has-dividers_around-space">
+                    <template for:each={countries} for:item="country">
+                    <li key={country} class="slds-item">{country}</li>
+                    </template>
+                </ul>              
+        </div>
+    </lightning-card>
+
+    <lightning-card title="for:each with array of objects">
+        <div class="slds-m-around_medium">       
+                <ul class="slds-has-dividers_around slds-has-block-links_space">
+                    <template for:each={ceoList} for:item="ceo">
+                        <li key={ceo.id} class="slds-item">
+                        <div class="slds-grid slds-gutters_small slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-2">
+                                <a href={ceo.website}>
+                                    <strong>{ceo.company}</strong>
+                                </a>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                {ceo.ceoName}
+                            </div>
+                        </div>
+                    </li>
+                    </template>
+                </ul>              
+        </div>
+    </lightning-card>
+
+    <lightning-card title="iterator Looping Demo">
+        <div class="slds-m-around_medium">       
+                <ul class="slds-has-dividers_around slds-has-block-links_space">
+                    <template iterator:ceo={ceoList}>
+                        <li key={ceo.value.id} class="slds-item">
+
+                        <!-- Header shown only before first item -->
+                        <template if:true={ceo.first}>
+                            <div class="slds-box slds-theme_shade slds-m-bottom_small">
+                                <strong>List of top companies and their CEOs</strong>
+                            </div>
+                        </template>
+
+                        <!-- Row content -->
+                        <div class="slds-grid slds-gutters_small slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-2">
+                                <a href={ceo.value.website}>
+                                    <strong>{ceo.value.company}</strong>
+                                </a>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                {ceo.value.ceoName}
+                            </div>
+                        </div>
+
+                        <!-- Footer shown only after last item -->
+                        <template if:true={ceo.last}>
+                            <div class="slds-box slds-theme_shade slds-m-top_small">
+                                <strong>Thanks for reading the list</strong>
+                            </div>
+                        </template>
+
+                    </li>
+                    </template>
+                </ul>              
+        </div>
+    </lightning-card>  
+</template>

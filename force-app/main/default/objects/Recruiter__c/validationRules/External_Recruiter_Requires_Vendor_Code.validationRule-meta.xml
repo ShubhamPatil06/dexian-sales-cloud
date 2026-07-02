@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Recruiter_Requires_Vendor_Code</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Recruiter_Type__c, &apos;External&apos;),
+    ISBLANK(Vendor_Code__c)
+)</errorConditionFormula>
+    <errorDisplayField>Vendor_Code__c</errorDisplayField>
+    <errorMessage>External/Vendor recruiters must have a Vendor Code. Please enter the agency Vendor Code (format: VND-ABBR-NNN) before saving.</errorMessage>
+</ValidationRule>

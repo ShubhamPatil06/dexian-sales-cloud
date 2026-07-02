@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pay_rate_cannot_exceed_bill_rate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Pay_Rate_Offered__c)),
+  NOT(ISBLANK(Bill_Rate_Quoted__c)),
+  Pay_Rate_Offered__c &gt;= Bill_Rate_Quoted__c
+)</errorConditionFormula>
+    <errorDisplayField>Bill_Rate_Quoted__c</errorDisplayField>
+    <errorMessage>Pay rate offered cannot be equal to or greater than the bill rate quoted. This submission would generate zero or negative margin.</errorMessage>
+</ValidationRule>

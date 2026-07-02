@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialization__c</fullName>
+    <label>Specialization</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Java Backend</fullName>
+                <default>false</default>
+                <label>Java Backend</label>
+            </value>
+            <value>
+                <fullName>.NET / Full Stack</fullName>
+                <default>false</default>
+                <label>.NET / Full Stack</label>
+            </value>
+            <value>
+                <fullName>Python / Data Engineering</fullName>
+                <default>false</default>
+                <label>Python / Data Engineering</label>
+            </value>
+            <value>
+                <fullName>Cloud (AWS / Azure / GCP)</fullName>
+                <default>false</default>
+                <label>Cloud (AWS / Azure / GCP)</label>
+            </value>
+            <value>
+                <fullName>DevOps / SRE</fullName>
+                <default>false</default>
+                <label>DevOps / SRE</label>
+            </value>
+            <value>
+                <fullName>Cybersecurity</fullName>
+                <default>false</default>
+                <label>Cybersecurity</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>SAP</fullName>
+                <default>false</default>
+                <label>SAP</label>
+            </value>
+            <value>
+                <fullName>IT Infrastructure / Networking</fullName>
+                <default>false</default>
+                <label>IT Infrastructure / Networking</label>
+            </value>
+            <value>
+                <fullName>Business Analysis / PM</fullName>
+                <default>false</default>
+                <label>Business Analysis / PM</label>
+            </value>
+            <value>
+                <fullName>Non-IT / General Staffing</fullName>
+                <default>false</default>
+                <label>Non-IT / General Staffing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

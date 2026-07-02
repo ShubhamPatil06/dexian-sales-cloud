@@ -1,0 +1,46 @@
+<template>
+    <!--Example of Simple Data-->
+    <div class="slds-m-around_medium">
+        <c-p2c-child-component
+        message="Hello From Parent Component"
+        card-title="P2C communication Using Primitive Datatypes"
+        random-num="40"
+        is-valid>
+    </c-p2c-child-component>
+    </div>
+
+    <!--Example of Complex Data-->
+    <div class="slds-m-around_medium">
+        <c-p2c-carousel-component
+        carousel-detail={carouselData}>
+        </c-p2c-carousel-component>
+    </div>
+
+    <!--Example of Data Passing On Action-->
+    <lightning-card title="P2C Communication On Action At Parent">
+        <div class="slds-m-around_medium">
+            <lightning-input 
+            type="number"  
+            label="Enter Percentage"
+            value={inputValue} 
+            onkeyup={changeHandler}>
+            </lightning-input>
+            <c-p2c-progress-bar-component
+             progress-value={inputValue}>
+            </c-p2c-progress-bar-component>
+        </div>
+    </lightning-card>
+
+    <!--Example of Calling Child Method From Parent-->
+        <lightning-card title="Calling Child Method From Parent Component">
+        <div class="slds-m-around_medium">
+            <c-p2c-slider-component></c-p2c-slider-component>
+            <lightning-button
+            variant="destructive"
+            label="Reset Slider"
+            onclick={handleClick}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+
+</template>

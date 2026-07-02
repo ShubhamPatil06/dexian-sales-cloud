@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Dynamic Styling in Lwc">
+        <div class="slds-m-around_medium">
+            <lightning-input type="number" value={percent} label="Enter Percentage" onkeyup={changeHandler}></lightning-input>
+            <p>
+                Dynamic Styling Percent - {percentage}
+            </p>
+            <!--"style={percentage} -Use this in below div for dynamic styling--> 
+            <div class="dynamic">Hey!I am Dynamic Alert!!</div>
+
+        </div>
+    </lightning-card>
+    
+</template>

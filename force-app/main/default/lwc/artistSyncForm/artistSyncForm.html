@@ -1,0 +1,162 @@
+<template>
+    <lightning-card>
+
+        <!-- ── CARD HEADER ─────────────────────────── -->
+        <div slot="title">
+            <lightning-icon
+                icon-name="standard:account"
+                size="small"
+                class="slds-m-right_x-small">
+            </lightning-icon>
+            Music Artist Sync
+        </div>
+
+        <div class="slds-p-around_medium">
+
+            <!-- ── LOADING SPINNER ────────────────────
+                 shown while Apex callout is in progress
+                 hides everything else underneath        -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner
+                        alternative-text="Syncing with Spotify..."
+                        size="medium">
+                    </lightning-spinner>
+                    <p class="slds-m-top_medium slds-text-color_weak">
+                        Syncing with Spotify...
+                    </p>
+                </div>
+            </template>
+
+            <!-- ── MAIN CONTENT (hidden while loading) -->
+            <template if:false={isLoading}>
+
+                <!-- ── ERROR BANNER ───────────────────
+                     shown when sync fails              -->
+                <template if:true={errorMessage}>
+                    <div class="slds-notify slds-notify_alert
+                                slds-alert_error slds-m-bottom_medium"
+                         role="alert">
+                        <lightning-icon
+                            icon-name="utility:error"
+                            size="x-small"
+                            class="slds-m-right_x-small">
+                        </lightning-icon>
+                        <span>{errorMessage}</span>
+                    </div>
+                </template>
+
+                <!-- ── SUCCESS CARD ───────────────────
+                     shown after a successful sync
+                     before navigating to record page   -->
+                <template if:true={syncResult}>
+                    <div class="artist-card slds-m-bottom_medium">
+
+                        <!-- Artist image (large URL) -->
+                        <template if:true={syncResult.imageLargeUrl}>
+                            <div class="artist-image-container">
+                                <img
+                                    src={syncResult.imageLargeUrl}
+                                    alt={syncResult.syncedName}
+                                    class="artist-image" />
+                            </div>
+                        </template>
+
+                        <!-- Artist details -->
+                        <div class="slds-m-top_medium">
+                            <h2 class="slds-text-heading_medium
+                                       slds-m-bottom_x-small">
+                                {syncResult.syncedName}
+                            </h2>
+
+                            <!-- Artist Type badge -->
+                            <lightning-badge
+                                label={syncResult.artistType}
+                                class="slds-m-bottom_small">
+                            </lightning-badge>
+
+                            <!-- Spotify URL link -->
+                            <template if:true={syncResult.spotifyUrl}>
+                                <div class="slds-m-top_small">
+                                    <lightning-formatted-url
+                                        value={syncResult.spotifyUrl}
+                                        label="Open in Spotify"
+                                        target="_blank">
+                                    </lightning-formatted-url>
+                                </div>
+                            </template>
+                        </div>
+
+                        <!-- Success message -->
+                        <div class="slds-notify slds-notify_toast
+                                    slds-theme_success slds-m-top_medium"
+                             role="status">
+                            <lightning-icon
+                                icon-name="utility:success"
+                                size="x-small"
+                                class="slds-m-right_x-small">
+                            </lightning-icon>
+                            Artist synced successfully!
+                            Redirecting to record...
+                        </div>
+                    </div>
+                </template>
+
+                <!-- ── INPUT FORM ──────────────────────
+                     hidden after successful sync        -->
+                <template if:false={syncResult}>
+
+                    <!-- Artist Name input -->
+                    <div class="slds-form-element slds-m-bottom_medium">
+                        <lightning-input
+                            type="text"
+                            label="Artist Name"
+                            placeholder="e.g. Coldplay, Adele, Drake"
+                            value={artistName}
+                            onchange={handleNameChange}
+                            required>
+                        </lightning-input>
+                    </div>
+
+                    <!-- Sync Status indicator
+                         only shown in Edit/Re-sync mode -->
+                    <template if:true={existingRecord}>
+                        <div class="slds-m-bottom_medium">
+                            <p class="slds-text-color_weak
+                                      slds-text-body_small">
+                                Current Sync Status:
+                                <strong>{existingRecord.Sync_Status__c}
+                                </strong>
+                                &nbsp;|&nbsp; Last Synced:
+                                <lightning-formatted-date-time
+                                    value={existingRecord.Last_Synced_Date__c}
+                                    year="numeric"
+                                    month="short"
+                                    day="2-digit"
+                                    hour="2-digit"
+                                    minute="2-digit">
+                                </lightning-formatted-date-time>
+                            </p>
+                        </div>
+                    </template>
+
+                    <!-- Action buttons -->
+                    <div class="slds-button-group">
+                        <lightning-button
+                            label={saveButtonLabel}
+                            variant="brand"
+                            onclick={handleSaveAndSync}
+                            disabled={isSaveDisabled}>
+                        </lightning-button>
+                        <lightning-button
+                            label="Cancel"
+                            variant="neutral"
+                            onclick={handleCancel}>
+                        </lightning-button>
+                    </div>
+
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

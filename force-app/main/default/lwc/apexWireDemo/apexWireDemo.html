@@ -1,0 +1,32 @@
+<template>
+    <!--Apex Wire as a Property-->
+    <lightning-card title="Apex Wire As a Property">
+        <div class="slds-m-around_medium">
+            <template lwc:if={contacts.data}>
+                <template for:each={contacts.data} for:item="contact">
+                    <div class="slds-box slds-box_small" key={contact.Id}>
+                        <p class="slds-text-title_caps"><strong>Title : </strong>{contact.Title}</p>
+                        <p class="slds-text-title_caps"><strong>Name : </strong>{contact.Name}</p>
+                        <p class="slds-text-title_caps"><strong>Email : </strong>{contact.Email}</p>
+                        <p class="slds-text-title_caps"><strong>Level : </strong>{contact.Level__c}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+    <!--Apex Wire as a Function-->
+    <lightning-card title="Apex Wire As a Function">
+        <div class="slds-m-around_medium">
+            <template lwc:if={contactList}>
+                <template for:each={contactList} for:item="contact">
+                    <div class="slds-box slds-box_small" key={contact.Id}>
+                        <p class="slds-text-title_caps"><strong>Title : </strong>{contact.Title}</p>
+                        <p class="slds-text-title_caps"><strong>Name : </strong>{contact.Name}</p>
+                        <p class="slds-text-title_caps"><strong>Email : </strong>{contact.Email}</p>
+                        <p class="slds-text-title_caps"><strong>Level : </strong>{contact.newLevel}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

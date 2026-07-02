@@ -1,0 +1,34 @@
+<template>
+    <!--Industry Picklist-->
+    <lightning-card title="getPicklistValues Adapter Industry Picklist">
+        <div class="slds-m-around_medium">
+            <template lwc:if={industryPicklistValues}>    
+                <lightning-combobox
+                        name="Industry"
+                        label="Industry"
+                        value={selectedIndustryValue}
+                        placeholder="Select Industry"
+                        options={industryOptions}
+                        onchange={handleIndustryChange} >
+                        </lightning-combobox>
+                        <p><strong class="slds-text-title_caps">Selected Value is : </strong>{selectedIndustryValue}</p>
+            </template>
+        </div>
+    </lightning-card>   
+    <!--Type Picklist-->
+    <lightning-card title="getPicklistValues Adapter Type Picklist">
+        <div class="slds-m-around_medium">
+            <template lwc:if={typePicklistValues}>    
+                <lightning-combobox
+                        name="Type"
+                        label="Type"
+                        value={selectedTypeValue}
+                        placeholder="Select Type"
+                        options={typeOptions}
+                        onchange={handleTypeChange} >
+                        </lightning-combobox>
+                        <p><strong class="slds-text-title_caps">Selected Value is : </strong>{selectedTypeValue}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

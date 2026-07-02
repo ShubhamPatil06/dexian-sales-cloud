@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="if:true and if:false Basic Demo">
+        <div class="slds-m-around_medium">
+            <lightning-button label={getLabel} onclick={showTextHandler}></lightning-button>
+            <div class="slds-m-around_medium">
+                <template if:true={isVisible}>
+                    <p class="slds-m-around_medium">This text is conditionally rendered!</p>
+                </template>
+                <template if:false={isVisible}>
+                    <p class="slds-m-around_medium"> *************************** </p>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="lwc:if and lwc:else Basic Demo">
+        <div class="slds-m-around_medium">
+            <lightning-button label={getLabel} onclick={showTextHandler}></lightning-button>
+                <div class="slds-m-around_medium">
+                    <template lwc:if={isVisible}>
+                        <p class="slds-m-around_medium">This text is conditionally rendered!</p>
+                    </template>
+                    <template lwc:else>
+                        <p class="slds-m-around_medium"> *************************** </p>
+                    </template>
+                </div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="if:true and if:false Getter Demo">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Enter Country Name" value={country} onkeyup={changeHandler}></lightning-input>
+            <div class="slds-m-around_medium">
+                <template if:true={isCountryIndia}>
+                    <p class="slds-m-around_medium">Yeahh! You are in India</p>
+                </template>
+                <template if:false={isCountryIndia}>   
+                    <p class="slds-m-around_medium"> Opps! You are not in India! </p>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+
+    
+    <lightning-card title="lwc:if and lwc:elseif and lwc:else Getter Demo">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Enter Country Name" value={newCountry} onkeyup={changeHandlerNew}></lightning-input>
+            <div class="slds-m-around_medium">
+                <template lwc:if={isCountryAustralia}>                    
+                    <p class="slds-m-around_medium">Yeahh! You are in Australia</p>
+                </template>      
+                    <p lwc:elseif={isCountryCanada} class="slds-m-around_medium">Yeahh! You are in Canada</p>
+                <template lwc:else>            
+                    <p class="slds-m-around_medium"> Opps! You are not in Australia! </p>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+  
+</template>

@@ -1,0 +1,64 @@
+<template>
+    <!--Standard Card-->
+    <div class="slds-m-around_medium">
+        <lightning-card variant="Narrow">
+        <!--Title-->
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            Standard Card
+        </h3>
+        <!--Actions-->
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <!--Body-->
+        <p class="slds-p-horizontal_small">Card Body Will Come Here</p>
+        <!--Footer-->
+        <p slot="footer">Card Footer</p>
+        </lightning-card>
+    </div>    
+
+    <!--Custom Card With Footer--> 
+    <div class="slds-m-around_medium">
+        <c-custom-lightning-card>
+        <!--Title-->
+        <h3 slot="title">Custom Card With Footer</h3>
+        <!--Actions-->
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <!--Body-->
+        <p class="slds-p-horizontal_small">Card Body Will Come Here</p>
+        <!--Footer-->
+        <p slot="footer">Card Footer</p>
+        </c-custom-lightning-card>
+    </div>
+
+    <!--Custom Card Without Footer-->
+    <div class="slds-m-around_medium">
+        <c-custom-lightning-card>
+        <!--Title-->
+        <h3 slot="title">Custom Card Without Footer</h3>
+        <!--Actions-->
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <!--Body-->
+        <p class="slds-p-horizontal_small">Card Body Will Come Here</p>
+        </c-custom-lightning-card>    
+    </div>
+
+    <!--Custom Card Without Actions-->
+    <div class="slds-m-around_medium">
+        <c-custom-lightning-card>
+        <!--Title-->
+        <h3 slot="title">Custom Card Without Actions</h3>
+        <!--Body-->
+        <p class="slds-p-horizontal_small">Card Body Will Come Here</p>
+        <!--Footer-->
+        <p slot="footer">Card Footer</p>
+        </c-custom-lightning-card>       
+    </div>
+
+    <!--Custom Card With Only Title-->
+    <div class="slds-m-around_medium">
+        <c-custom-lightning-card>
+        <!--Title-->
+        <h3 slot="title">Custom Card With Only Title</h3>
+        </c-custom-lightning-card>   
+    </div>
+</template>

@@ -1,0 +1,24 @@
+<template>
+    <lightning-card>
+        <div slot="title" class="slds-text-align_center">
+            Slots Demo Parent Component
+        </div>
+        <div class="slds-m-around_medium">
+            <c-slots-demo-child>
+                <p slot="agentforce">Agentforce is Salesforce's AI Agent Platform.</p>
+                <p slot="agentbuilder">Low-code/no-code environment for creating agents.</p>
+                <p slot="agentscript">Language for defining agent behavior with structured business logic.</p>
+                <p slot="footer" class="slds-text-title_caps"><strong>Thanks for Reading! </strong></p>
+            </c-slots-demo-child>
+        </div>
+        <div class="slds-m-around_medium">
+            <c-slots-demo-child>
+                <p slot="agentforce">Agentforce is Salesforce's AI Agent Platform.</p>
+                <p slot="agentbuilder">Low-code/no-code environment for creating agents.</p>
+                <p slot="agentscript">Language for defining agent behavior with structured business logic.</p>
+                <!-- <p slot="footer" class="slds-text-title_caps"><strong>Thanks for Reading! </strong></p> -->
+            </c-slots-demo-child>
+        </div>
+    </lightning-card>
+    
+</template>

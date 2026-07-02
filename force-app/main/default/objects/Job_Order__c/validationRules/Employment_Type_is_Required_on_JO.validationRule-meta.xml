@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employment_Type_is_Required_on_JO</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Employment_Type__c, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Employment_Type__c</errorDisplayField>
+    <errorMessage>Employment Type is Required To Create Job Orders</errorMessage>
+</ValidationRule>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="getObjectInfo Adapter">
+        <div class="slds-m-around_medium">
+            <p><strong class="slds-text-title_caps">Default RecordType Id : </strong>{defaultRecordTypeId}</p>
+            <p><strong class="slds-text-title_caps">Object Api Name : </strong>{apiName}</p>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="getObjectInfos Adapter">
+        <div class="slds-m-around_medium">
+            <template lwc:if={objectInfos}>
+                <template for:each={objectInfos} for:item="obj">
+                    <div key={obj.result.apiName}>
+                        <p><strong class="slds-text-title_caps">Default RecordType Id : </strong>{obj.result.defaultRecordTypeId}</p>
+                        <p><strong class="slds-text-title_caps">Object Api Name : </strong>{obj.result.apiName}</p>                     
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

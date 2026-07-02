@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Apex Imperative Call With Params">
+        <div class="slds-m-around_medium">
+            <div class="slds-p-bottom_xx-small">
+                <lightning-input
+                 type="search"
+                 onchange={handleChange}
+                 label="Search Account"
+                 value={searchkey}
+                 ></lightning-input>
+            </div>
+            <template lwc:if={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <div class="slds-box slds-box-size_xx-small" key={account.Id}>
+                        <p class="slds-text-title_caps"><strong>Name : </strong>{account.Name}</p>
+                        <p class="slds-text-title_caps"><strong>Type : </strong>{account.Type}</p>
+                        <p class="slds-text-title_caps"><strong>Industry : </strong>{account.Industry}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>    
+</template>

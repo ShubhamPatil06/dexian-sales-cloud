@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Website_must_include_protocol</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( NOT(ISBLANK(Website__c)), NOT(BEGINS(Website__c, &apos;https://&apos;)), NOT(BEGINS(Website__c, &apos;http://&apos;)) )</errorConditionFormula>
+    <errorDisplayField>Website__c</errorDisplayField>
+    <errorMessage>Website must start with https:// or http://</errorMessage>
+</ValidationRule>

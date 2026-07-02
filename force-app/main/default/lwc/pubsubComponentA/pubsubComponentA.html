@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="PubSub Component A">
+        <div class="slds-m-around_medium">
+            <lightning-input 
+            type="text"
+            label="Enter Message to Publish"
+            onkeyup={changeHandler}>
+            </lightning-input>
+            <lightning-button
+            variant="brand"
+            label="Publish Message"
+            onclick={publishHandler}
+            class="slds-m-top_medium">
+            </lightning-button>
+        </div>
+    </lightning-card>  
+</template>

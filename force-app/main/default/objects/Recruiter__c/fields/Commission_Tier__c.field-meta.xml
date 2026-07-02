@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission_Tier__c</fullName>
+    <label>Commission Tier</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Base (1–3 placements)</fullName>
+                <default>true</default>
+                <label>Base (1–3 placements)</label>
+            </value>
+            <value>
+                <fullName>Silver (4–6 placements)</fullName>
+                <default>false</default>
+                <label>Silver (4–6 placements)</label>
+            </value>
+            <value>
+                <fullName>Gold (7–10 placements)</fullName>
+                <default>false</default>
+                <label>Gold (7–10 placements)</label>
+            </value>
+            <value>
+                <fullName>Platinum (11+ placements)</fullName>
+                <default>false</default>
+                <label>Platinum (11+ placements)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

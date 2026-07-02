@@ -1,0 +1,7 @@
+.child {
+    background-color: var(--slds-g-color-error-base-30);
+    color: white;
+    text-align: center;
+    width: 100%;
+    
+}

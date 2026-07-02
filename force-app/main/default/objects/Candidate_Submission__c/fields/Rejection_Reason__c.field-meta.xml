@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Reason__c</fullName>
+    <label>Rejection Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rate Mismatch</fullName>
+                <default>false</default>
+                <label>Rate Mismatch</label>
+            </value>
+            <value>
+                <fullName>Skills Gap</fullName>
+                <default>false</default>
+                <label>Skills Gap</label>
+            </value>
+            <value>
+                <fullName>Overqualified</fullName>
+                <default>false</default>
+                <label>Overqualified</label>
+            </value>
+            <value>
+                <fullName>Underqualified</fullName>
+                <default>false</default>
+                <label>Underqualified</label>
+            </value>
+            <value>
+                <fullName>No Show</fullName>
+                <default>false</default>
+                <label>No Show</label>
+            </value>
+            <value>
+                <fullName>Candidate Withdrew</fullName>
+                <default>false</default>
+                <label>Candidate Withdrew</label>
+            </value>
+            <value>
+                <fullName>Client Cancelled Role</fullName>
+                <default>false</default>
+                <label>Client Cancelled Role</label>
+            </value>
+            <value>
+                <fullName>Position Filled by Another Agency</fullName>
+                <default>false</default>
+                <label>Position Filled by Another Agency</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

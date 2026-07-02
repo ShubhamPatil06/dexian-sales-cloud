@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Lightning Record Edit Form Demo">
+        <div class="slds-m-around_medium">
+            <!--record-id="003NS00002EHdlSYAT" -> Add recordId to Edit the Record Edit Form-->
+            <lightning-record-edit-form
+            object-api-name={objectName}
+            >
+                <lightning-messages></lightning-messages>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input-field field-name={fields.parentAccount}></lightning-input-field>
+                        <lightning-input-field field-name={fields.nameField}></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input-field field-name={fields.titleField}></lightning-input-field>
+                        <lightning-input-field field-name={fields.phoneField}></lightning-input-field>
+                        <label class="slds-p-left_xx-small">Enter Your Email Id</label>
+                        <lightning-input-field field-name={fields.emailField} variant="label-hidden" class="slds-p-left_xx-small"></lightning-input-field>
+                    </div>
+                </div>
+                <div class="slds-m-left_xx-small">
+                    <lightning-button variant="destructive" label="Cancel" class="slds-m-left_x-small" onclick={resetHandler}></lightning-button>
+                    <lightning-button variant="brand" type="submit" label="Save" class="slds-m-left_x-small" onclick={successHandler}></lightning-button>
+                </div>
+        </lightning-record-edit-form>
+        </div>
+    </lightning-card> 
+</template>

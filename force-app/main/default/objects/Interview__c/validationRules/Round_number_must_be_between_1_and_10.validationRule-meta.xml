@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Round_number_must_be_between_1_and_10</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+  Round_Number__c &lt; 1,
+  Round_Number__c &gt; 10
+)</errorConditionFormula>
+    <errorDisplayField>Round_Number__c</errorDisplayField>
+    <errorMessage>Round number must be between 1 and 10</errorMessage>
+</ValidationRule>
